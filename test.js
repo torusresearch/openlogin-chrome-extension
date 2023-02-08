@@ -1,6 +1,5 @@
-
-
 // clientId can be any string for localhost
+
 const openlogin = new Openlogin.default({
     clientId: "BPq0JAhOpTVg4UpgTdPQH4AizK-t9SyUInNugZ0kWYMOuVfGsTLZfLkmAg1AoXzQCWDOCtY90CSbVmevli8Mtkc",
     _iframeUrl: 'http://localhost:3000',

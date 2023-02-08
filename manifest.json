@@ -3,15 +3,16 @@
   "version": "1.0",
   "manifest_version": 2,
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyOOw2NA/nBW/71mdOkrKdxV+NM+VE4hHNwX5UHruT6j/I2+D2tPRP58Qq1mE+RjbWUzcqOZHA9uGWIP3jeXYhwEmu7Fos3C3DiZjtEWis1xm74izPRYBnPO6y5/WKniq117hvY+G91RfYx8IdUVmfkNJqtNaNvQDK2k2Qv1FZMIDktQwcn5GImTcrnzpXmHrCu3YvQ3+XO5tQ4NC0yODWNKdBL6cVDNyFpnBLv+l5Td9YNZW/gSjMzQPZihkc9Qu9aF0Qzq0YZw7EigQb3TqD9sREFBCgXlakTGh3hkrfvb3n2m04lLhf5BAiKB34lO5K5rI72SRTINBPoSOnMLvNQIDAQAB",
-  "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net 'sha256-JBiCSW+3ZKOMXBpVqv1Y+bjv/REKUNXaBRGMyKQwWYo=''unsafe-inline'",
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net 'sha256-JBiCSW+3ZKOMXBpVqv1Y+bjv/REKUNXaBRGMyKQwWYo=' https://unpkg.com  'unsafe-inline'",
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "page" : "background.html"
+
   },
   "browser_action": {
     "default_popup": "popup.html",
     "default_title": "app"
   },
+  "web_accessible_resources": [
+  ],
   "permissions": ["tabs", "storage", "clipboardWrite", "identity"]
 }

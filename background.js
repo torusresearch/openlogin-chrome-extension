@@ -7,7 +7,10 @@
 // // * addListener - what we want to do with this event
 // //
 // // See https://developer.chrome.com/docs/extensions/reference/events/ for additional details.
-
+import dkls from './dkls_loader.js';
+// import * as eccrypto from "https://unpkg.com/@toruslabs/eccrypto@1.1.8/browser.js";
+// console.log(eccrypto);
+console.log(dkls);
 chrome.runtime.onInstalled.addListener(async () => {
 
     var jQueryScript = document.createElement('script');
