@@ -9,6 +9,12 @@ const openlogin = new Openlogin.default({
     await openlogin.init();
 })()
 
+
+document.getElementById("run_dkls").onclick = async function () {
+    console.log("run_dkls");
+    chrome.runtime.sendMessage({ msg: "run_dkls" });
+}
+
 document.getElementById("login_background").onclick = async function () {
     chrome.runtime.sendMessage({ msg: "login" });
 }
