@@ -1,6 +1,5 @@
-
-
 // clientId can be any string for localhost
+
 const openlogin = new Openlogin.default({
     clientId: "BPq0JAhOpTVg4UpgTdPQH4AizK-t9SyUInNugZ0kWYMOuVfGsTLZfLkmAg1AoXzQCWDOCtY90CSbVmevli8Mtkc",
     _iframeUrl: 'http://localhost:3000',
@@ -9,6 +8,12 @@ const openlogin = new Openlogin.default({
 (async function () {
     await openlogin.init();
 })()
+
+
+document.getElementById("run_dkls").onclick = async function () {
+    console.log("run_dkls");
+    chrome.runtime.sendMessage({ msg: "run_dkls" });
+}
 
 document.getElementById("login_background").onclick = async function () {
     chrome.runtime.sendMessage({ msg: "login" });
