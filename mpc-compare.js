@@ -8274,7 +8274,11 @@ use chrome, FireFox or Internet Explorer 11`);
             });
           });
         }), b(this, "set", function(x, w) {
-          return chrome.storage.local.set(b({}, x, w));
+          return new Promise(function(c) {
+            chrome.storage.local.set(b({}, x, w), function() {
+              c();
+            });
+          });
         });
       }))();
     })(), B;
